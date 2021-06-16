@@ -39,3 +39,5 @@
 /cmake-build-debug
 /sample
 /lib/.DS_Store
+/lib/googletest
+/lib/yaml-cpp
