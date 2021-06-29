@@ -1,12 +1,18 @@
 #include <iostream>
-#include "yaml-cpp/yaml.h"
+#include "Person.h"
 
 int main() {
-    // Using Relative Path
-    YAML::Node config = YAML::LoadFile("../../text_files/test.yaml");
 
-    if (config["name"]) {
-        std::cout << "My name is: " << config["name"].as<std::string>() << "\n";
-    }
+    Person person;
+
+    person.setFirstName("Mike");
+    person.setLastName("Guzman");
+    person.setDocumentId(123456);
+
+    std::cout << "My name is: " << person.getFirstName() + " " +
+                                   person.getLastName() << "\n";
+
+    std::cout << "My name is: " << person.testYaml() << "\n";
+
     return 0;
 }
