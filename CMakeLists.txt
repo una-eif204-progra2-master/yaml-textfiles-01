@@ -10,5 +10,7 @@ add_subdirectory(src)
 add_subdirectory(tst)
 
 ## Use next line if you are going to use Google Test
-## add_subdirectory(lib/googletest)
+## add_subdirectory(lib/yaml-cpp/test/gtest-1.8.0 EXCLUDE_FROM_ALL)
+add_subdirectory(lib/googletest)
+option(YAML_CPP_BUILD_TESTS "Enable testing and parse tools" FALSE)
 add_subdirectory(lib/yaml-cpp)
